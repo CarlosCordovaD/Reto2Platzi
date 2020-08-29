@@ -8,13 +8,17 @@ body{
 }
 .container__center{
     width:91%;
+    height: auto;
     margin: 4em auto;
     border-radius: 15px;
     overflow: hidden;
     background-color: #ffffff;
+    -webkit-box-shadow: -5px 10px 16px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 10px 16px -12px rgba(0,0,0,0.75);
+    box-shadow: -5px 10px 16px -12px rgba(0,0,0,0.75);
 }
 .container__center .img{
-    height: 200px;
+    height: 54vw;
     overflow: hidden;
     background: url("../images/drawers.jpg") center top -15px;
     background-size: 100%;
@@ -43,8 +47,8 @@ p {
     grid-template-columns: 13vw 1fr 10vw;
     max-width: 100%;
     grid-gap: 1em;
-    min-height: 5em;
-    max-height: 5em;
+    min-height: 7vh;
+    max-height: 12vh;
 }
 .name{
     display: flex;
@@ -54,10 +58,11 @@ p {
 .name h4 {
     color: #4e5a6a;
     font-size: 4vw;
+    margin: 0;
 }
 .name small {
     columns: #c2d1d5;
-    font-weight: 300;
+    font-weight: 500;
 }
 .persona {
     width: 13vw;
@@ -71,7 +76,7 @@ p {
 .persona img {
     width: 100%;
 }
-.icono {    
+.icono, .icono2 {    
     background-color:#edf2f8;
     border-radius: 50%;
     overflow: hidden;
@@ -85,8 +90,7 @@ p {
 .cont__icono {
     color: #4e5a6a;
     display: flex;
-    align-self: center;
-  
+    align-self: center;  
     font-size: 5vw;
 }
 .attribution{
@@ -94,10 +98,20 @@ p {
 }
 .sociales{
     background-color: #49556f;
-    min-height: 5em;
-    max-height: 5em;
+    min-height: 7vh;
+    max-height: 12vh;
     display: flex;
     align-self: center;
+    animation: fade 1s;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 .sociales__cont {
     width: 91%;
@@ -112,6 +126,7 @@ p {
     justify-content: center;
     align-items: center;
     color: #8793a9;
+    font-size: 4vw;
 }
 .redes {
     display: flex;
@@ -130,7 +145,90 @@ p {
 .sociales .cont__icono{
     color: white;
 }
+
 .ocultar {
+    display: none; 
+}
+.text .icono2{
     display: none;
-    transition: ease-in-out 4s;
+}
+
+@media screen and (min-width: 850px){
+    .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .container__center{
+        display: flex;
+        align-content: center;
+        justify-content: center;       
+        width: 53.5vw;
+    }
+    .container__general{
+        display: grid;      
+        grid-template-columns: .6fr 1fr;
+        grid-gap: 0;              
+    }
+    .container__center .img{
+        height: 100%;
+        background: url("../images/drawers.jpg") right -5vw top -0.6vw;
+        background-size:calc( 100% + 13vh);
+        background-repeat: no-repeat;  
+    }
+    .text {
+        width: 80%;
+        margin: 0 auto; 
+        padding: 2vw 0;
+        box-sizing: border-box;
+        align-self: center;
+    }
+    .text h2 {
+        color: #4e5a6a;
+        font-weight: 700;
+        font-size: 1.5vw;
+        line-height: 1.5em;
+        margin-top:0;
+        margin-bottom: .8vw;
+    }
+    p {
+        columns: #c2d1d5;
+        font-weight: 300;
+        font-size: 1vw;
+        line-height: 1.5em;
+        margin-bottom: 2vh;
+    }
+    
+    .detalle {        
+        grid-template-columns: .2fr 1fr .5fr;       
+        grid-gap: 1em;      
+    }
+    .name{
+        display: flex;
+        align-self: center;
+        justify-self: left;
+    }
+    .name h4 {    
+        font-size: 1vw;   
+    }
+    .persona {
+        width: 3.5vw;
+        height: 3.5vw;  
+        display: flex;
+        align-self: center;
+        justify-self: left;
+    }
+    .text .icono {         
+        display: none;
+    }
+    .icono2 .cont__icono {   
+        font-size: 1.3vw;
+    }  
+    .text .icono2{        
+        width: 2.3vw;
+        height: 2.3vw;
+        display: flex;
+        align-self: center;
+        justify-self: right;                    
+    }
 }
