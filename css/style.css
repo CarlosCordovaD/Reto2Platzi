@@ -26,7 +26,7 @@ body{
 }
 .text {
     width: 80%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 .text h2 {
     color: #4e5a6a;
@@ -40,15 +40,14 @@ p {
     font-weight: 300;
     font-size: 3.65vw;
     line-height: 1.9em;
-    margin: 5px 0;
+    margin: 2vwpx 0;
 }
 .detalle {
     display: grid;
     grid-template-columns: 13vw 1fr 10vw;
     max-width: 100%;
     grid-gap: 1em;
-    min-height: 7vh;
-    max-height: 12vh;
+    height: 15vw;
 }
 .name{
     display: flex;
@@ -98,8 +97,7 @@ p {
 }
 .sociales{
     background-color: #49556f;
-    min-height: 7vh;
-    max-height: 12vh;
+    height: 15vw;
     display: flex;
     align-self: center;
     animation: fade 1s;
@@ -158,6 +156,9 @@ p {
         height: 100vh;
         display: flex;
         align-items: center;
+    }
+    .detalle {
+        height: 3vw;
     }
     .container__center{
         display: flex;
@@ -236,6 +237,12 @@ p {
         justify-self: right;   
                  
     }
+    .sociales {
+        display: none;
+    }
+    .detalle {
+        display: grid;
+    }
     .tooltip {
         position: relative;
         display: inline-block;
@@ -251,7 +258,8 @@ p {
         position: absolute;   
         display: none;   
         justify-content: center;
-        align-content: center;       
+        align-content: center;  
+        animation: fade 1s;     
     }
     .tiptext .share {
         font-size: 1vw;
@@ -261,7 +269,7 @@ p {
     }
     .face, .tiptext .twtt, .tiptext .ptr{
         display: flex;
-        align-self: center;
+        align-self: center;        
     }
     .tooltip .tiptext::after {
         content: "";
