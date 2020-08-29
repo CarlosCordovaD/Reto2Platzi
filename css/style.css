@@ -1,0 +1,136 @@
+body{
+    background-color: #edf2f8;
+    font-family: 'Manrope', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.container__center{
+    width:91%;
+    margin: 4em auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.container__center .img{
+    height: 200px;
+    overflow: hidden;
+    background: url("../images/drawers.jpg") center top -15px;
+    background-size: 100%;
+    background-repeat: no-repeat;  
+}
+.text {
+    width: 80%;
+    margin: 0 auto; 
+}
+.text h2 {
+    color: #4e5a6a;
+    font-weight: 700;
+    font-size: 4.3vw;
+    line-height: 1.5em;
+    margin-top: 30px;
+}
+p {
+    columns: #c2d1d5;
+    font-weight: 300;
+    font-size: 3.65vw;
+    line-height: 1.9em;
+    margin: 5px 0;
+}
+.detalle {
+    display: grid;
+    grid-template-columns: 13vw 1fr 10vw;
+    max-width: 100%;
+    grid-gap: 1em;
+    min-height: 5em;
+    max-height: 5em;
+}
+.name{
+    display: flex;
+    align-self: center;
+    justify-self: left;
+}
+.name h4 {
+    color: #4e5a6a;
+    font-size: 4vw;
+}
+.name small {
+    columns: #c2d1d5;
+    font-weight: 300;
+}
+.persona {
+    width: 13vw;
+    height: 13vw;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+.persona img {
+    width: 100%;
+}
+.icono {    
+    background-color:#edf2f8;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    align-self: center;
+    justify-content: center;    
+    cursor: pointer;
+}
+.cont__icono {
+    color: #4e5a6a;
+    display: flex;
+    align-self: center;
+  
+    font-size: 5vw;
+}
+.attribution{
+    margin-top: -4em;
+}
+.sociales{
+    background-color: #49556f;
+    min-height: 5em;
+    max-height: 5em;
+    display: flex;
+    align-self: center;
+}
+.sociales__cont {
+    width: 91%;
+    margin: 0 auto;   
+    display: grid;
+    grid-template-columns: 25vw 1fr 14vw;
+    grid-gap: 2vw;
+    align-content: center;
+}
+.share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8793a9;
+}
+.redes {
+    display: flex;
+    color: white;
+    align-self: center;
+    justify-content: left;
+    font-size: 6.5vw;
+}
+.face, .twtt{
+    margin-right: 3vw;
+}
+.sociales .icono {    
+    background-color:#8793a9;
+    
+}
+.sociales .cont__icono{
+    color: white;
+}
+.ocultar {
+    display: none;
+    transition: ease-in-out 4s;
+}
