@@ -164,6 +164,7 @@ p {
         align-content: center;
         justify-content: center;       
         width: 53.5vw;
+        overflow: visible ; 
     }
     .container__general{
         display: grid;      
@@ -175,6 +176,9 @@ p {
         background: url("../images/drawers.jpg") right -5vw top -0.6vw;
         background-size:calc( 100% + 13vh);
         background-repeat: no-repeat;  
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        
     }
     .text {
         width: 80%;
@@ -222,13 +226,68 @@ p {
         display: none;
     }
     .icono2 .cont__icono {   
-        font-size: 1.3vw;
+        font-size: 1.3vw;    
     }  
     .text .icono2{        
         width: 2.3vw;
         height: 2.3vw;
         display: flex;
         align-self: center;
-        justify-self: right;                    
+        justify-self: right;   
+                 
     }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        align-self: center;
+        justify-self: right;
+    }
+    .tooltip .tiptext {        
+        width: 18vw;
+        background-color:#49556f;
+        color: #fff;
+        text-align: center;
+        border-radius: 10px;       
+        position: absolute;   
+        display: none;   
+        justify-content: center;
+        align-content: center;       
+    }
+    .tiptext .share {
+        font-size: 1vw;
+    }
+    .tiptext .redes{
+        font-size: 2vw;       
+    }
+    .face, .tiptext .twtt, .tiptext .ptr{
+        display: flex;
+        align-self: center;
+    }
+    .tooltip .tiptext::after {
+        content: "";
+        position: absolute;
+        border-width: 5px;     
+    }
+    .mostrar {
+        display: flex !important; 
+    }
+    .tooltip.top .tiptext{
+        margin-left: -9vw;
+        bottom: 110%;
+        left: 60%;
+    }
+    .tooltip.top .tiptext::after{
+        margin-left: -5px;
+        top: 100%;
+        left: 50%;
+        border-color: #2E2E2E transparent transparent transparent;
+    }
+    .face, .twtt, .share{
+        margin-right: 1vw;
+    }
+    .oscuro{
+        background-color: #8793a9;
+        color: white;
+    }
+ 
 }
